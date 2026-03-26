@@ -5,8 +5,12 @@ public class SortedSearch {
             int[] sorted_array;
             int result;
 
+            try{
             result = slowSearch(search_array, 5);
             System.out.println("Index of array with linear search result is " + result + "\n");
+            }catch (Exception e) {
+                System.out.println("slowSearch: Array is null: " + e.getMessage());
+            }
 
             if (args.length > 0) {
                 first_array = parseArgsToIntArray(args);
