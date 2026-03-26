@@ -13,7 +13,11 @@ public class SortedSearch {
                 return;
             }
   
+            try {
             youMustDoThis(first_array);
+            } catch (Exception e) {
+                System.out.println("youMustDoThis: Array is null: " + e.getMessage());
+            }
 
             result = fastSearch(search_array, 5);
             System.out.println("Index of array with binary search result is " + result + "\n");
