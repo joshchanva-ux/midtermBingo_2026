@@ -30,10 +30,13 @@ public class SortedSearch {
             sorted_array = moveDataAround(search_array);
             // print out array
             System.out.println("The array after the bubble sort is:");
+           try{
             for (int i = 0; i < sorted_array.length; i++) {
                     System.out.print(sorted_array[i] + " ");
             }
-        
+              } catch (Exception e) {
+                 System.out.println("printSortedArray: Array is null: " + e.getMessage());
+                }
         }
         
         // O(1)
